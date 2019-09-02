@@ -9,13 +9,15 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+
+	"github.com/wit-ai/wit-go/entities"
 )
 
 // MessageResponse - https://wit.ai/docs/http/20170307#get__message_link
 type MessageResponse struct {
-	ID       string                 `json:"msg_id"`
-	Text     string                 `json:"_text"`
-	Entities map[string]interface{} `json:"entities"`
+	ID       string            `json:"msg_id"`
+	Text     string            `json:"_text"`
+	Entities entities.Entities `json:"entities"`
 }
 
 // MessageRequest - https://wit.ai/docs/http/20170307#get__message_link
