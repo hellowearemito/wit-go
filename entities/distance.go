@@ -8,7 +8,7 @@ type Distances struct {
 // Distance - represents the distance element.
 type Distance struct {
 	Confidence float64 `json:"confidence"`
-	Value      string  `json:"value"`
+	Value      *string `json:"value,omitempty"`
 	Type       string  `json:"type"`
-	Unit       string  `json:"unit"`
+	Unit       *string `json:"unit,omitempty"`
 }
