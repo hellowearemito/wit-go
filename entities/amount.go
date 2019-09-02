@@ -11,6 +11,7 @@ type AmountOfMoney struct {
 	From       *AmountOfMoneyRange `json:"from,omitempty"`
 	To         *AmountOfMoneyRange `json:"to,omitempty"`
 	Type       string              `json:"type"`
+	Value      *string             `json:"value"`
 	Unit       *string             `json:"unit,omitempty"`
 }
 
