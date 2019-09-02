@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/wit-ai/wit-go/entities"
+	"github.com/hellowearemito/wit-go/entities"
 )
 
 // MessageResponse - https://wit.ai/docs/http/20170307#get__message_link
