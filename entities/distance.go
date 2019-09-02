@@ -7,8 +7,16 @@ type Distances struct {
 
 // Distance - represents the distance element.
 type Distance struct {
-	Confidence float64 `json:"confidence"`
-	Value      *string `json:"value,omitempty"`
-	Type       string  `json:"type"`
-	Unit       *string `json:"unit,omitempty"`
+	Confidence float64        `json:"confidence"`
+	Value      *int64         `json:"value,omitempty"`
+	Type       string         `json:"type"`
+	Unit       *string        `json:"unit,omitempty"`
+	From       *DistanceRange `json:"from,omitempty"`
+	To         *DistanceRange `json:"to,omitempty"`
+}
+
+// DistanceRange represents the from and to.
+type DistanceRange struct {
+	Value int64  `json:"value"`
+	Unit  string `json:"unit"`
 }
