@@ -17,7 +17,7 @@ type Quantity struct {
 
 // QuantityFrom - represents the from of quantity
 type QuantityFrom struct {
-	Value   string `json:"value"`
+	Value   int64  `json:"value"`
 	Product string `json:"product"`
 	Unit    string `json:"unit"`
 }
