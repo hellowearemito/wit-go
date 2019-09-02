@@ -7,13 +7,13 @@ type Datetimes struct {
 
 // Datetime - represents the datetime element
 type Datetime struct {
-	Confidence float64        `json:"confidence"`
-	Values     DatetimeValue  `json:"values"`
-	Value      *string        `json:"value,omitempty"`
-	Grain      *string        `json:"grain,omitempty"`
-	To         *DatetimeRange `json:"to,omitempty"`
-	From       *DatetimeRange `json:"from,omitempty"`
-	Type       string         `json:"type"`
+	Confidence float64         `json:"confidence"`
+	Values     []DatetimeValue `json:"values"`
+	Value      *string         `json:"value,omitempty"`
+	Grain      *string         `json:"grain,omitempty"`
+	To         *DatetimeRange  `json:"to,omitempty"`
+	From       *DatetimeRange  `json:"from,omitempty"`
+	Type       string          `json:"type"`
 }
 
 // DatetimeValue - represents the value of datetime
