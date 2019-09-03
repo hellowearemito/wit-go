@@ -32,3 +32,26 @@ func TestAgeOfPersons(t *testing.T) {
 	assert.Equal(t, "5", persons[0].Value)
 	assert.Equal(t, "value", persons[0].Type)
 }
+
+func TestRoles(t *testing.T) {
+	response := `
+		{
+			"artist": [
+			  	{
+					"suggested": true,
+					"confidence": 0.85334644445925,
+					"value": "Augusto Pavarotti",
+					"type": "value"
+			  	}
+			]
+		}
+	`
+
+	entities := Entities{}
+	err := json.Unmarshal([]byte(response), &entities)
+	assert.Nil(t, err)
+
+	roles, err := entities.Roles()
+	assert.Nil(t, err)
+	assert.NotEqual(t, 0, len(roles))
+}

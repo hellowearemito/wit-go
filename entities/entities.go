@@ -537,12 +537,12 @@ func (e Entities) Roles() (map[string][]Entity, error) {
 			continue
 		}
 
-		entity := Entity{}
-		err := json.Unmarshal(value, &entity)
+		var es []Entity
+		err := json.Unmarshal(value, &es)
 		if err != nil {
 			return entities, err
 		}
-		entities[key] = append(entities[key], entity)
+		entities[key] = es
 	}
 
 	return entities, nil
